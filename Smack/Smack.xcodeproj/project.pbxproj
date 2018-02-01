@@ -16,6 +16,8 @@
 		CC75BB8D202358DB00A2FACF /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB8C202358DB00A2FACF /* ChatVC.swift */; };
 		CC75BB8F202358EB00A2FACF /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB8E202358EB00A2FACF /* ChannelVC.swift */; };
 		CC75BB9120235DFD00A2FACF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB9020235DFD00A2FACF /* GradientView.swift */; };
+		CC75BB942023776900A2FACF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB932023776900A2FACF /* Constants.swift */; };
+		CC75BB962023927B00A2FACF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB952023927B00A2FACF /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CC75BB8C202358DB00A2FACF /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		CC75BB8E202358EB00A2FACF /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		CC75BB9020235DFD00A2FACF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		CC75BB932023776900A2FACF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CC75BB952023927B00A2FACF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		CC75BB71202223A900A2FACF /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				CC75BB922023775400A2FACF /* Utilities */,
 				CC75BB8B202358B800A2FACF /* Model */,
 				CC75BB8A202358B300A2FACF /* View */,
 				CC75BB89202358A800A2FACF /* Controller */,
@@ -114,6 +119,7 @@
 			children = (
 				CC75BB8C202358DB00A2FACF /* ChatVC.swift */,
 				CC75BB8E202358EB00A2FACF /* ChannelVC.swift */,
+				CC75BB952023927B00A2FACF /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +137,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CC75BB922023775400A2FACF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC75BB932023776900A2FACF /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,9 +285,11 @@
 			files = (
 				CC75BB8F202358EB00A2FACF /* ChannelVC.swift in Sources */,
 				CC75BB8D202358DB00A2FACF /* ChatVC.swift in Sources */,
+				CC75BB962023927B00A2FACF /* LoginVC.swift in Sources */,
 				CC75BB9120235DFD00A2FACF /* GradientView.swift in Sources */,
 				CC75BB73202223A900A2FACF /* AppDelegate.swift in Sources */,
 				CC75BB8820222CEF00A2FACF /* SWRevealViewController.m in Sources */,
+				CC75BB942023776900A2FACF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

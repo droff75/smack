@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C78CBEB3BD212588E68AB8A3 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348B035AC3DDC3FDCC1E85AF /* Pods_Smack.framework */; };
 		CC1947312024F35300712ECF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1947302024F35300712ECF /* AuthService.swift */; };
+		CC1947332024FC9C00712ECF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1947322024FC9C00712ECF /* RoundedButton.swift */; };
 		CC75BB73202223A900A2FACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB72202223A900A2FACF /* AppDelegate.swift */; };
 		CC75BB78202223A900A2FACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC75BB76202223A900A2FACF /* Main.storyboard */; };
 		CC75BB7A202223A900A2FACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC75BB79202223A900A2FACF /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		428A4B7F1EFB9EE7197381F1 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		5ACA93F8A9306349A39C6461 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1947302024F35300712ECF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CC1947322024FC9C00712ECF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CC75BB6F202223A900A2FACF /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC75BB72202223A900A2FACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC75BB77202223A900A2FACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				CC75BB9020235DFD00A2FACF /* GradientView.swift */,
+				CC1947322024FC9C00712ECF /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC75BB8F202358EB00A2FACF /* ChannelVC.swift in Sources */,
+				CC1947332024FC9C00712ECF /* RoundedButton.swift in Sources */,
 				CC75BB8D202358DB00A2FACF /* ChatVC.swift in Sources */,
 				CC75BB982023942A00A2FACF /* CreateAccountVC.swift in Sources */,
 				CC1947312024F35300712ECF /* AuthService.swift in Sources */,

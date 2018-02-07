@@ -23,6 +23,7 @@
 		CC19474A202B5D3700712ECF /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC194748202B5D3700712ECF /* AddChannelVC.xib */; };
 		CC19474C202B661400712ECF /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19474B202B661400712ECF /* SocketService.swift */; };
 		CC19474E202B988000712ECF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19474D202B988000712ECF /* Message.swift */; };
+		CC194750202BA17400712ECF /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19474F202BA17400712ECF /* KeyboardBoundView.swift */; };
 		CC75BB73202223A900A2FACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75BB72202223A900A2FACF /* AppDelegate.swift */; };
 		CC75BB78202223A900A2FACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC75BB76202223A900A2FACF /* Main.storyboard */; };
 		CC75BB7A202223A900A2FACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC75BB79202223A900A2FACF /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		CC194748202B5D3700712ECF /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		CC19474B202B661400712ECF /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CC19474D202B988000712ECF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CC19474F202BA17400712ECF /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardBoundView.swift; path = "../../../Smack Assets/KeyboardBind View/KeyboardBoundView.swift"; sourceTree = "<group>"; };
 		CC75BB6F202223A900A2FACF /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC75BB72202223A900A2FACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC75BB77202223A900A2FACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		CC75BB8A202358B300A2FACF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC19474F202BA17400712ECF /* KeyboardBoundView.swift */,
 				CC75BB9020235DFD00A2FACF /* GradientView.swift */,
 				CC1947322024FC9C00712ECF /* RoundedButton.swift */,
 				CC1947382029FED400712ECF /* AvatarCell.swift */,
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC194750202BA17400712ECF /* KeyboardBoundView.swift in Sources */,
 				CC19474C202B661400712ECF /* SocketService.swift in Sources */,
 				CC19473E202A376F00712ECF /* ProfileVC.swift in Sources */,
 				CC194746202B4BBF00712ECF /* ChannelCell.swift in Sources */,

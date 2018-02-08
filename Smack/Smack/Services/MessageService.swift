@@ -60,7 +60,7 @@ class MessageService {
                     completion(true)
                 }
             } else {
-                debugPrint(response.error as? Any)
+                debugPrint(response.error as Any)
                 completion(false)
             }
         }

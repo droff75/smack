@@ -259,24 +259,44 @@
                                 <rect key="frame" x="169" y="215" width="37" height="37"/>
                                 <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert-icon-red-11" translatesAutoresizingMaskIntoConstraints="NO" id="Rcm-dk-Nwf" userLabel="email-login-failed">
+                                <rect key="frame" x="27.5" y="157.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="2aL-J3-Tda"/>
+                                    <constraint firstAttribute="height" constant="25" id="xAj-pe-hb7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert-icon-red-11" translatesAutoresizingMaskIntoConstraints="NO" id="ksc-cj-0wG" userLabel="password-login-failed">
+                                <rect key="frame" x="27.5" y="207.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="UY4-b6-Je1"/>
+                                    <constraint firstAttribute="width" constant="25" id="sB4-d6-n5E"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Rcm-dk-Nwf" firstAttribute="centerY" secondItem="fbJ-0p-C4Y" secondAttribute="centerY" id="3lu-4P-BHT"/>
                             <constraint firstItem="wdR-Xw-jVY" firstAttribute="centerX" secondItem="KuM-5T-2V7" secondAttribute="centerX" id="5Mh-Y7-vPE"/>
                             <constraint firstItem="Jqg-Rm-YLU" firstAttribute="centerX" secondItem="KuM-5T-2V7" secondAttribute="centerX" id="95i-db-5G7"/>
                             <constraint firstItem="xSY-w2-eQN" firstAttribute="centerX" secondItem="KuM-5T-2V7" secondAttribute="centerX" id="9b4-M9-A7U"/>
                             <constraint firstItem="Jqg-Rm-YLU" firstAttribute="top" secondItem="wdR-Xw-jVY" secondAttribute="bottom" constant="40" id="Akc-14-n0o"/>
                             <constraint firstItem="dkN-NN-CeS" firstAttribute="top" secondItem="3cw-Tm-2gr" secondAttribute="bottom" constant="8" id="BfX-cs-dgi"/>
+                            <constraint firstItem="Jqg-Rm-YLU" firstAttribute="leading" secondItem="Rcm-dk-Nwf" secondAttribute="trailing" constant="10" id="Fmq-vy-PNs"/>
                             <constraint firstItem="y4p-Y5-ZsQ" firstAttribute="centerX" secondItem="KuM-5T-2V7" secondAttribute="centerX" id="N5R-1c-OL3"/>
                             <constraint firstItem="y4p-Y5-ZsQ" firstAttribute="top" secondItem="Jqg-Rm-YLU" secondAttribute="bottom" constant="40" id="NWi-aU-7LS"/>
                             <constraint firstItem="zDV-9Y-R3d" firstAttribute="centerX" secondItem="KuM-5T-2V7" secondAttribute="centerX" id="OFU-3n-qZX"/>
                             <constraint firstItem="zDV-9Y-R3d" firstAttribute="centerY" secondItem="KuM-5T-2V7" secondAttribute="centerY" constant="-100" id="TOx-IW-mRB"/>
                             <constraint firstItem="dkN-NN-CeS" firstAttribute="trailing" secondItem="KuM-5T-2V7" secondAttribute="trailingMargin" id="Ubk-hd-NuX"/>
                             <constraint firstItem="xSY-w2-eQN" firstAttribute="top" secondItem="y4p-Y5-ZsQ" secondAttribute="bottom" id="W2e-1U-iTr"/>
+                            <constraint firstItem="Jqg-Rm-YLU" firstAttribute="leading" secondItem="ksc-cj-0wG" secondAttribute="trailing" constant="10" id="XaV-cn-suM"/>
+                            <constraint firstItem="ksc-cj-0wG" firstAttribute="centerY" secondItem="MlW-3a-VZ3" secondAttribute="centerY" id="a9N-Q3-E0Y"/>
                             <constraint firstItem="wdR-Xw-jVY" firstAttribute="top" secondItem="3cw-Tm-2gr" secondAttribute="bottom" constant="60" id="jxB-ao-j8n"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailLoginFailedImg" destination="Rcm-dk-Nwf" id="pEn-PZ-nnd"/>
+                        <outlet property="passwordLoginFailedImg" destination="ksc-cj-0wG" id="Lu0-hz-IbJ"/>
                         <outlet property="passwordTxt" destination="MlW-3a-VZ3" id="SwY-2i-oGX"/>
                         <outlet property="spinner" destination="zDV-9Y-R3d" id="q2L-6f-kAe"/>
                         <outlet property="userNameTxt" destination="fbJ-0p-C4Y" id="HSH-jS-1cS"/>
@@ -717,6 +737,7 @@
     </scenes>
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
+        <image name="alert-icon-red-11" width="271" height="229"/>
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>

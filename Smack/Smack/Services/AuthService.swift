@@ -67,7 +67,7 @@ class AuthService {
         ]
         
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
-            if response.result.error == nil {
+            if response.response?.statusCode == 200 {
                 guard let data = response.data else { return }
                 if let json = try? JSON(data: data) {
                     self.userEmail = json["user"].stringValue

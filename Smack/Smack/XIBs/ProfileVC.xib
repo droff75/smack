@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +20,7 @@
                 <outlet property="profileImg" destination="dKR-gi-v9K" id="JLd-m3-ZUr"/>
                 <outlet property="userEmail" destination="Ts9-9t-faG" id="VT1-jo-EKB"/>
                 <outlet property="userName" destination="ljE-8h-PfJ" id="2TE-yN-LaT"/>
+                <outlet property="userNameTxtField" destination="z1e-2Y-0zX" id="2Lj-LD-1K3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,6 +31,13 @@
             <subviews>
                 <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTm-rO-XIp" userLabel="bgView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-Pg-IEH">
+                            <rect key="frame" x="233" y="557" width="22" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtW-L3-R0L">
@@ -44,29 +51,54 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-ya-f1z">
-                            <rect key="frame" x="103" y="55.5" width="129" height="209.5"/>
+                            <rect key="frame" x="65" y="55.5" width="205" height="209.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybf-ZD-vav">
-                                    <rect key="frame" x="1" y="0.0" width="127" height="27.5"/>
+                                    <rect key="frame" x="39" y="0.0" width="127" height="27.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="dKR-gi-v9K" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
-                                    <rect key="frame" x="14.5" y="41.5" width="100" height="100"/>
+                                    <rect key="frame" x="52.5" y="41.5" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="9ee-3H-Sue"/>
                                         <constraint firstAttribute="height" constant="100" id="PK9-OG-P4s"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dave Roff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljE-8h-PfJ">
-                                    <rect key="frame" x="27" y="155.5" width="75" height="20"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="IyC-MP-2uh">
+                                    <rect key="frame" x="0.0" y="155.5" width="205" height="20"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dave Roff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljE-8h-PfJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dave Roff" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-2Y-0zX">
+                                            <rect key="frame" x="82" y="0.0" width="96" height="20"/>
+                                            <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="textFieldDonePressed:" destination="-1" eventType="primaryActionTriggered" id="1D0-H5-iQj"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5W-dY-APf">
+                                            <rect key="frame" x="185" y="0.0" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="XvL-Hy-K85"/>
+                                                <constraint firstAttribute="height" constant="20" id="twD-Ff-Q0a"/>
+                                            </constraints>
+                                            <state key="normal" image="icons8-pencil-50"/>
+                                            <connections>
+                                                <action selector="editBtnPressed:" destination="-1" eventType="touchUpInside" id="l5Z-gy-UYs"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaveR@dev.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts9-9t-faG">
-                                    <rect key="frame" x="0.0" y="189.5" width="129" height="20"/>
+                                    <rect key="frame" x="38" y="189.5" width="129" height="20"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -111,6 +143,7 @@
     </objects>
     <resources>
         <image name="closeButton" width="28" height="28"/>
+        <image name="icons8-pencil-50" width="50" height="50"/>
         <image name="profileDefault" width="192" height="192"/>
     </resources>
 </document>

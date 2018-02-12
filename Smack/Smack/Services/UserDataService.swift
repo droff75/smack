@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class UserDataService {
     static let instance = UserDataService()
@@ -70,5 +71,27 @@ class UserDataService {
         AuthService.instance.authToken = ""
         MessageService.instance.clearChannels()
         MessageService.instance.clearMessages()
+    }
+    
+    func changeUserName(userName: String) {
+        name = userName
+    }
+    
+    func updateUserName(id: String, name: String, completion: @escaping CompletionHandler) {
+        let body : [String: Any] = [
+            "name": name,
+            "email": email,
+            "avatarName": avatarName,
+            "avatarColor": avatarColor
+        ]
+        
+        Alamofire.request("\(URL_UPDATE_USER)\(id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            if response.result.error == nil {
+                completion(true)
+            } else {
+                debugPrint(response.error as Any)
+                completion(false)
+            }
+        }
     }
 }

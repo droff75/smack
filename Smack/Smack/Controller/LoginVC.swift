@@ -61,7 +61,6 @@ class LoginVC: UIViewController {
     }
     
     func loginFailed() {
-
         shakeView(viewToShake: userNameTxt)
         shakeView(viewToShake: passwordTxt)
         emailLoginFailedImg.isHidden = false
@@ -70,8 +69,7 @@ class LoginVC: UIViewController {
         spinner.stopAnimating()
     }
     
-    func shakeView(viewToShake: UITextField) {
-        
+    func shakeView(viewToShake: UITextField) {        
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 2

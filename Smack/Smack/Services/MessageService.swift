@@ -13,7 +13,11 @@ import SwiftyJSON
 class MessageService {
     static let instance = MessageService()
     
-    var channels = [Channel]()
+    var channels = [Channel]() {
+        didSet {
+            print("channels changed")
+        }
+    }
     var messages = [Message]()
     var unreadChannels = [String]()
     var selectedChannel : Channel?
@@ -21,6 +25,7 @@ class MessageService {
     func findAllChannel(completion: @escaping CompletionHandler) {
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
+                self.channels.removeAll()
                 guard let data = response.data else { return }
                 if let json = try? JSON(data: data).array {
                     for item in json! {

@@ -77,7 +77,7 @@ class UserDataService {
         name = userName
     }
     
-    func updateUserName(id: String, name: String, completion: @escaping CompletionHandler) {
+    func updateUserName(id: String, name: String = UserDataService.instance.name, email: String = UserDataService.instance.email, avatarName: String = UserDataService.instance.avatarName, avatarColor: String = UserDataService.instance.avatarColor, completion: @escaping CompletionHandler) {
         let body : [String: Any] = [
             "name": name,
             "email": email,
